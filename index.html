@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI智能产品 - 未来科技</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -.022em;
+        }
+
+        .nav {
+            background-color: rgba(29, 29, 31, 0.95);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(20px);
+            z-index: 999;
+        }
+
+        .nav-logo {
+            height: 20px;
+            width: auto;
+            margin-right: 20px;
+        }
+
+        .nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav ul li {
+            margin: 0 20px;
+        }
+
+        .nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .nav ul li a:hover {
+            opacity: 1;
+        }
+
+        .lang-switch {
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .lang-switch:hover {
+            opacity: 1;
+        }
+
+        .hero {
+            padding-top: 44px;
+        }
+
+        .product-card {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #d2d2d7;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Glasses - Dark blue gradient */
+        .product-card:nth-child(1) {
+            background: linear-gradient(180deg, #1a2b4d 0%, #e8f1f8 100%);
+        }
+
+        /* Watch - Dark warm gradient */
+        .product-card:nth-child(2) {
+            background: linear-gradient(180deg, #2d1f1a 0%,#fdfaf9 100%);
+        }
+
+        /* Earphones - Dark purple gradient */
+        .product-card:nth-child(3) {
+            background: linear-gradient(180deg, #1f1a2d 0%,#f8f7fa 100%);
+        }
+
+        /* Toy - Dark pink gradient */
+        .product-card:nth-child(4) {
+            background: linear-gradient(180deg, #2d1a24 0%, #fefafb 100%);
+        }
+
+        .product-card:last-child {
+            border-bottom: none;
+        }
+
+        .product-logo {
+            font-size: 56px;
+            font-weight: 600;
+            letter-spacing: -.005em;
+            margin-bottom: 6px;
+            color: #ffffff;
+        }
+
+        .product-subtitle {
+            font-size: 28px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .product-heading {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: -.003em;
+            color: #ffffff;
+        }
+
+        .product-price {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 50px;
+        }
+
+        .button {
+            padding: 8px 16px;
+            border-radius: 980px;
+            font-size: 17px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            min-width: 100px;
+            font-weight: 400;
+            letter-spacing: -.022em;
+        }
+
+        .button-primary {
+            background-color: #0071e3;
+            color: #fff;
+        }
+
+        .button-primary:hover {
+            background-color: #0077ed;
+        }
+
+        .button-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #0071e3;
+        }
+
+        .button-secondary:hover {
+            background-color: rgba(0, 113, 227, 0.1);
+        }
+
+        .product-image-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            max-width: 1000px;
+            max-height: 300px;
+            object-fit: contain;
+        }
+
+        .footer {
+            background-color: #f5f5f7;
+            padding: 34px 0;
+            font-size: 12px;
+            color: #6e6e73;
+            border-top: 1px solid #d2d2d7;
+        }
+
+        .footer-content {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .copyright {
+            margin-bottom: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+
+        .footer-links a {
+            color: #424245;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .separator {
+            color: #d2d2d7;
+            padding: 0;
+        }
+
+        @media (max-width: 734px) {
+            .product-logo {
+                font-size: 40px;
+            }
+            
+            .product-subtitle {
+                font-size: 24px;
+            }
+
+            .product-heading {
+                font-size: 32px;
+            }
+
+            .product-card {
+                padding: 100px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html"><img src="assets/chatuni.svg" alt="ChatUni Logo" class="nav-logo"></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="glasses.html">AI Glasses</a></li>
+            <li><a href="watch.html">AI Watch</a></li>
+            <li><a href="earphones.html">AI Earphones</a></li>
+            <li><a href="toy.html">AI Plush Toy</a></li>
+            <li><span class="lang-switch" onclick="switchLanguage()">中文</span></li>
+        </ul>
+    </nav>
+
+    <script>
+    function switchLanguage() {
+        const path = window.location.pathname;
+        const filename = path.split('/').pop();
+        if (filename.includes('-cn')) {
+            window.location.href = filename.replace('-cn', '');
+        } else {
+            window.location.href = filename.replace('.html', '-cn.html');
+        }
+    }
+    </script>
+
+    <div class="hero">
+        <section class="product-card">
+            <div class="product-logo">AI Glasses</div>
+            <h2 class="product-heading">AI Vision at Your Fingertips</h2>
+            <div class="product-price">$299</div>
+            <div class="button-group">
+                <a href="glasses.html" class="button button-primary">Learn More</a>
+                <a href="#" class="button button-secondary">Buy</a>
+            </div>
+            <div class="product-image-container">
+                <img src="assets/AI眼镜/home-glass.png" alt="AI眼镜" class="product-image">
+            </div>
+        </section>
+
+        <section class="product-card">
+            <div class="product-logo">AI Watch</div>
+            <h2 class="product-heading">Intelligence on Your Wrist</h2>
+            <div class="product-price">$199</div>
+            <div class="button-group">
+                <a href="watch.html" class="button button-primary">Learn More</a>
+                <a href="#" class="button button-secondary">Buy</a>
+            </div>
+            <div class="product-image-container">
+                <img src="assets/AI手表/home-watch.png" alt="AI手表" class="product-image">
+            </div>
+        </section>
+
+        <section class="product-card">
+            <div class="product-logo">AI Earphones</div>
+            <h2 class="product-heading">Immersive Sound Experience</h2>
+            <div class="product-price">$99</div>
+            <div class="button-group">
+                <a href="earphones.html" class="button button-primary">Learn More</a>
+                <a href="#" class="button button-secondary">Buy</a>
+            </div>
+            <div class="product-image-container">
+                <img src="assets/AI耳机/home-earphone.png" alt="AI耳机" class="product-image">
+            </div>
+        </section>
+
+        <section class="product-card">
+            <div class="product-logo">AI Plush Toy</div>
+            <h2 class="product-heading">AI Companion, Warm Company</h2>
+            <div class="product-price">$99</div>
+            <div class="button-group">
+                <a href="toy.html" class="button button-primary">Learn More</a>
+                <a href="#" class="button button-secondary">Buy</a>
+            </div>
+            <div class="product-image-container">
+                <img src="assets/AI毛绒玩具/home-toy.png" alt="AI毛绒玩具" class="product-image">
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="copyright">Copyright © 2025 ChatUni Inc. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="#">Use of Cookies</a>
+                <span class="separator">|</span>
+                <a href="#">Terms of Use</a>
+                <span class="separator">|</span>
+                <a href="#">Sales and Refunds</a>
+                <span class="separator">|</span>
+                <a href="#">Legal</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
