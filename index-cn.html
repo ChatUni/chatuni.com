@@ -54,22 +54,22 @@
         }
 
         /* Glasses - Dark blue gradient */
-        .product-card:nth-child(1) {
+        .product-card:nth-child(2) {
             background: linear-gradient(180deg, #1a2b4d 0%, #e8f1f8 100%);
         }
 
         /* Watch - Dark warm gradient */
-        .product-card:nth-child(2) {
+        .product-card:nth-child(3) {
             background: linear-gradient(180deg, #2d1f1a 0%,#fdfaf9 100%);
         }
 
         /* Earphones - Dark purple gradient */
-        .product-card:nth-child(3) {
+        .product-card:nth-child(4) {
             background: linear-gradient(180deg, #1f1a2d 0%,#f8f7fa 100%);
         }
 
         /* Toy - Dark pink gradient */
-        .product-card:nth-child(4) {
+        .product-card:nth-child(5) {
             background: linear-gradient(180deg, #2d1a24 0%, #fefafb 100%);
         }
 
@@ -163,7 +163,42 @@
             object-fit: contain;
         }
 
+        .intro-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+            color: #ffffff;
+        }
+
+        .intro-text {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: -.003em;
+            line-height: 1.3;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro-description {
+            font-size: 20px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         @media (max-width: 734px) {
+            .intro-text {
+                font-size: 24px;
+            }
+
+            .intro-description {
+                font-size: 16px;
+            }
+
             .product-logo {
                 font-size: 40px;
             }
@@ -177,7 +212,7 @@
             }
 
             .product-card {
-                padding: 100px 20px;
+                padding: 60px 20px;
             }
         }
     </style>
@@ -186,6 +221,10 @@
     <chat-header-cn></chat-header-cn>
 
     <div class="hero">
+        <section class="intro-section">
+            <p class="intro-text">ChatUni致力于打造创新的AI智能消费产品，提升您的日常生活体验。</p>
+            <p class="intro-description">通过实时翻译、英语私教、心理咨询和会议记录等AI助手，我们的可穿戴设备和智能伴侣产品将AI技术无缝融入用户的日常生活。</p>
+        </section>
         <section class="product-card">
             <div class="product-logo">AI眼镜</div>
             <h2 class="product-heading">AI视觉，触手可及</h2>

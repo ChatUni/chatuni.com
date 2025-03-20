@@ -13,7 +13,7 @@ class Header extends HTMLElement {
                     background-color: rgba(29, 29, 31, 0.95);
                     position: fixed;
                     top: 0;
-                    width: 94%;
+                    width: 98%;
                     height: 44px;
                     display: flex;
                     justify-content: space-between;
@@ -119,6 +119,10 @@ class Header extends HTMLElement {
                 }
 
                 @media (max-width: 734px) {
+                    .nav {
+                        width: 94%;
+                    }
+
                     .nav ul li:not(:first-child):not(:last-child) {
                         display: none;
                     }
