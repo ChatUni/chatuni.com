@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Watch - Future Technology</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
     <style>
         * {
             margin: 0;
@@ -17,149 +19,29 @@
             background-color: #000;
             color: #fff;
         }
-.nav {
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 44px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(20px);
-    z-index: 999;
-    padding: 0 16px;
-}
 
-.nav-logo {
-    height: 20px;
-    width: auto;
-}
+        @media (max-width: 734px) {
+            .hero {
+                padding-bottom: 80px;
+            }
 
-.nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    justify-content: space-between;
-}
+            .hero h1 {
+                font-size: 40px;
+                margin: 60px 0 16px;
+            }
 
-.nav ul li {
-    margin: 0;
-}
+            .hero p {
+                font-size: 21px;
+            }
 
-.nav ul li:not(:first-child):not(:last-child) {
-    margin: 0 20px;
-}
+            .feature h2 {
+                font-size: 32px;
+            }
 
-.nav ul li a {
-    color: #f5f5f7;
-    text-decoration: none;
-    font-size: 14px;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-    display: flex;
-    align-items: center;
-}
-
-.nav ul li a:hover,
-.nav ul li a.active {
-    opacity: 1;
-}
-
-.lang-switch {
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-    font-size: 14px;
-    color: #f5f5f7;
-    padding: 10px 0;
-}
-
-.lang-switch:hover {
-    opacity: 1;
-}
-
-.mobile-nav {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 64px;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(20px);
-    z-index: 999;
-    padding: 8px 0 4px;
-}
-
-.mobile-nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0 16px;
-}
-
-.mobile-nav a {
-    color: #f5f5f7;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-    font-size: 11px;
-    padding: 4px 12px;
-}
-
-.mobile-nav a:hover,
-.mobile-nav a.active {
-    opacity: 1;
-}
-
-.mobile-nav .material-icons {
-    font-size: 24px;
-    margin-bottom: 2px;
-}
-
-@media (max-width: 734px) {
-    .nav ul li:not(:first-child):not(:last-child) {
-        display: none;
-    }
-    
-    .mobile-nav {
-        display: block;
-    }
-
-    .hero {
-        padding-bottom: 80px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-        margin: 60px 0 16px;
-    }
-
-    .hero p {
-        font-size: 21px;
-    }
-
-    .feature h2 {
-        font-size: 32px;
-    }
-
-    .feature p {
-        font-size: 17px;
-    }
-
-    .footer {
-        margin-bottom: 64px;
-    }
-}
+            .feature p {
+                font-size: 17px;
+            }
+        }
 
         .hero {
             padding-top: 44px;
@@ -213,91 +95,37 @@
             margin-bottom: 30px;
         }
 
-        .footer {
-            background-color: #f5f5f7;
-            padding: 34px 0;
-            font-size: 12px;
-            color: #6e6e73;
-            border-top: 1px solid #d2d2d7;
-        }
-
-        .footer-content {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .copyright {
-            margin-bottom: 12px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 0;
-        }
-
-        .footer-links a {
-            color: #424245;
-            text-decoration: none;
-            padding: 0 10px;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        .separator {
-            color: #d2d2d7;
-            padding: 0;
-        }
     </style>
 </head>
 <body>
-    <nav class="nav">
-        <ul>
-            <li><a href="index.html"><img src="assets/chatuni.svg" alt="ChatUni Logo" class="nav-logo"></a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="glasses.html">AI Glasses</a></li>
-            <li><a href="watch.html">AI Watch</a></li>
-            <li><a href="earphones.html">AI Earphones</a></li>
-            <li><a href="toy.html">AI Plush Toy</a></li>
-            <li><span class="lang-switch" onclick="switchLanguage()">中文</span></li>
-        </ul>
-    </nav>
+    <chat-header></chat-header>
 
     <div class="hero">
         <h1>AI Watch</h1>
         <p>AI on Your Wrist, Control at Your Command</p>
         <div class="price">$199</div>
-        <img src="assets/AI手表/home-watch.png" alt="AI Watch Main Image" class="product-image">
+        <img src="assets/watch/en/0.png" alt="AI Watch Main Image" class="product-image">
     </div>
 
     <div class="features">
         <div class="feature">
             <h2>AI Language Tutor</h2>
             <p>Smart AI tutor provides personalized language learning experience, accompanying your study 24/7 to help improve your language skills.</p>
-            <img src="assets/AI手表/slide-17.png" alt="AI Tutor Feature" class="product-image">
         </div>
 
         <div class="feature">
             <h2>Real-time Translation</h2>
             <p>Instant voice translation supporting multiple languages, making communication barrier-free.</p>
-            <img src="assets/AI手表/slide-18.png" alt="Real-time Translation Feature" class="product-image">
         </div>
 
         <div class="feature">
             <h2>Multi-language Translation</h2>
             <p>Support text translation in multiple languages, enabling cross-language communication anytime, anywhere.</p>
-            <img src="assets/AI手表/slide-19.png" alt="Multi-language Translation" class="product-image">
         </div>
 
         <div class="feature">
             <h2>Daily Updates</h2>
             <p>Smart push notifications for daily language learning content, including trending news, cultural knowledge, and more.</p>
-            <img src="assets/AI手表/slide-16.png" alt="Daily Updates" class="product-image">
         </div>
     </div>
 
@@ -312,61 +140,13 @@
         }
     }
     </script>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="copyright">Copyright © 2025 ChatUni Inc. All rights reserved.</div>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <span class="separator">|</span>
-                <a href="#">Use of Cookies</a>
-                <span class="separator">|</span>
-                <a href="#">Terms of Use</a>
-                <span class="separator">|</span>
-                <a href="#">Sales and Refunds</a>
-                <span class="separator">|</span>
-                <a href="#">Legal</a>
-            </div>
-        </div>
-    </footer>
-    <nav class="mobile-nav">
-        <ul>
-            <li>
-                <a href="index.html">
-                    <span class="material-icons">home</span>
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="glasses.html">
-                    <span class="material-icons">visibility</span>
-                    Glasses
-                </a>
-            </li>
-            <li>
-                <a href="watch.html" class="active">
-                    <span class="material-icons">watch</span>
-                    Watch
-                </a>
-            </li>
-            <li>
-                <a href="earphones.html">
-                    <span class="material-icons">headphones</span>
-                    Earphones
-                </a>
-            </li>
-            <li>
-                <a href="toy.html">
-                    <span class="material-icons">toys</span>
-                    Toy
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <chat-footer></chat-footer>
     <script>
         // Add active class to current page in mobile nav
         document.addEventListener('DOMContentLoaded', function() {
             const currentPath = window.location.pathname;
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+            const header = document.querySelector('chat-header');
+            const mobileNavLinks = header.shadowRoot.querySelectorAll('.mobile-nav a');
             mobileNavLinks.forEach(link => {
                 if (link.getAttribute('href') === currentPath.split('/').pop()) {
                     link.classList.add('active');

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI毛绒玩具 - 未来科技</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="components/header-cn.js"></script>
+    <script src="components/footer-cn.js"></script>
     <style>
         * {
             margin: 0;
@@ -17,149 +19,33 @@
             background-color: #000;
             color: #fff;
         }
-.nav {
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 44px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(20px);
-    z-index: 999;
-    padding: 0 16px;
-}
 
-.nav-logo {
-    height: 20px;
-    width: auto;
-}
+        @media (max-width: 734px) {
+            .hero {
+                padding-bottom: 80px;
+            }
 
-.nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    justify-content: space-between;
-}
+            .hero h1 {
+                font-size: 40px;
+                margin: 60px 0 16px;
+            }
 
-.nav ul li {
-    margin: 0;
-}
+            .hero p {
+                font-size: 21px;
+            }
 
-.nav ul li:not(:first-child):not(:last-child) {
-    margin: 0 20px;
-}
+            .feature h2 {
+                font-size: 32px;
+            }
 
-.nav ul li a {
-    color: #f5f5f7;
-    text-decoration: none;
-    font-size: 14px;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-    display: flex;
-    align-items: center;
-}
+            .feature p {
+                font-size: 17px;
+            }
 
-.nav ul li a:hover,
-.nav ul li a.active {
-    opacity: 1;
-}
-
-.lang-switch {
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-    font-size: 14px;
-    color: #f5f5f7;
-    padding: 10px 0;
-}
-
-.lang-switch:hover {
-    opacity: 1;
-}
-
-.mobile-nav {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 64px;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(20px);
-    z-index: 999;
-    padding: 8px 0 4px;
-}
-
-.mobile-nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0 16px;
-}
-
-.mobile-nav a {
-    color: #f5f5f7;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-    font-size: 11px;
-    padding: 4px 12px;
-}
-
-.mobile-nav a:hover,
-.mobile-nav a.active {
-    opacity: 1;
-}
-
-.mobile-nav .material-icons {
-    font-size: 24px;
-    margin-bottom: 2px;
-}
-
-@media (max-width: 734px) {
-    .nav ul li:not(:first-child):not(:last-child) {
-        display: none;
-    }
-    
-    .mobile-nav {
-        display: block;
-    }
-
-    .hero {
-        padding-bottom: 80px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-        margin: 60px 0 16px;
-    }
-
-    .hero p {
-        font-size: 21px;
-    }
-
-    .feature h2 {
-        font-size: 32px;
-    }
-
-    .feature p {
-        font-size: 17px;
-    }
-
-    .footer {
-        margin-bottom: 64px;
-    }
-}
+            .footer {
+                margin-bottom: 64px;
+            }
+        }
 
         .hero {
             padding-top: 44px;
@@ -212,92 +98,41 @@
             line-height: 1.5;
             margin-bottom: 30px;
         }
-
-        .footer {
-            background-color: #f5f5f7;
-            padding: 34px 0;
-            font-size: 12px;
-            color: #6e6e73;
-            border-top: 1px solid #d2d2d7;
-        }
-
-        .footer-content {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .copyright {
-            margin-bottom: 12px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 0;
-        }
-
-        .footer-links a {
-            color: #424245;
-            text-decoration: none;
-            padding: 0 10px;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        .separator {
-            color: #d2d2d7;
-            padding: 0;
-        }
     </style>
 </head>
 <body>
-    <nav class="nav">
-        <ul>
-            <li><a href="index-cn.html"><img src="assets/chatuni.svg" alt="ChatUni Logo" class="nav-logo"></a></li>
-            <li><a href="index-cn.html">首页</a></li>
-            <li><a href="glasses-cn.html">AI眼镜</a></li>
-            <li><a href="watch-cn.html">AI手表</a></li>
-            <li><a href="earphones-cn.html">AI耳机</a></li>
-            <li><a href="toy-cn.html">AI毛绒玩具</a></li>
-            <li><span class="lang-switch" onclick="switchLanguage()">EN</span></li>
-        </ul>
-    </nav>
+    <chat-header-cn></chat-header-cn>
 
     <div class="hero">
         <h1>AI毛绒玩具</h1>
         <p>AI伙伴，温暖陪伴</p>
         <div class="price">¥699</div>
-        <img src="assets/AI毛绒玩具/img1.png" alt="AI毛绒玩具主图" class="product-image">
+        <img src="assets/toy/cn/0.png" alt="AI毛绒玩具主图" class="product-image">
     </div>
 
     <div class="features">
         <div class="feature">
             <h2>AI互动</h2>
             <p>先进的AI技术识别语音指令，与孩子进行自然对话和互动。</p>
-            <img src="assets/AI毛绒玩具/img2.jpg" alt="AI互动功能" class="product-image">
+            <img src="assets/toy/cn/1.png" alt="AI互动功能" class="product-image">
         </div>
 
         <div class="feature">
             <h2>教育陪伴</h2>
             <p>内置丰富的教育资源，可以讲故事、教唱歌、答疑解惑，让学习充满乐趣。</p>
-            <img src="assets/AI毛绒玩具/img1.png" alt="教育功能" class="product-image">
+            <img src="assets/toy/cn/2.png" alt="教育功能" class="product-image">
         </div>
 
         <div class="feature">
             <h2>情感交流</h2>
             <p>具备情感识别能力，能够感知孩子的情绪变化，给予适当的回应和安慰。</p>
-            <img src="assets/AI毛绒玩具/slide-02.png" alt="情感交流" class="product-image">
+            <img src="assets/toy/cn/3.png" alt="情感交流" class="product-image">
         </div>
 
         <div class="feature">
             <h2>安全材质</h2>
             <p>采用环保安全的毛绒材质，柔软舒适，让孩子抱着更安心。</p>
-            <img src="assets/AI毛绒玩具/slide-02.png" alt="安全材质" class="product-image">
+            <img src="assets/toy/cn/4.png" alt="安全材质" class="product-image">
         </div>
     </div>
 
@@ -312,56 +147,7 @@
         }
     }
     </script>
-    <footer class="footer">
-      <div class="footer-content">
-          <div class="copyright">Copyright © 2025 ChatUni Inc. 保留所有权利。</div>
-          <div class="footer-links">
-              <a href="#">隐私政策</a>
-              <span class="separator">|</span>
-              <a href="#">Cookie 使用</a>
-              <span class="separator">|</span>
-              <a href="#">使用条款</a>
-              <span class="separator">|</span>
-              <a href="#">销售与退款</a>
-              <span class="separator">|</span>
-              <a href="#">法律信息</a>
-          </div>
-      </div>
-  </footer>
-    <nav class="mobile-nav">
-        <ul>
-            <li>
-                <a href="index-cn.html">
-                    <span class="material-icons">home</span>
-                    首页
-                </a>
-            </li>
-            <li>
-                <a href="glasses-cn.html">
-                    <span class="material-icons">visibility</span>
-                    眼镜
-                </a>
-            </li>
-            <li>
-                <a href="watch-cn.html">
-                    <span class="material-icons">watch</span>
-                    手表
-                </a>
-            </li>
-            <li>
-                <a href="earphones-cn.html">
-                    <span class="material-icons">headphones</span>
-                    耳机
-                </a>
-            </li>
-            <li>
-                <a href="toy-cn.html" class="active">
-                    <span class="material-icons">toys</span>
-                    玩具
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <chat-footer-cn></chat-footer-cn>
     <script>
         // Add active class to current page in mobile nav
         document.addEventListener('DOMContentLoaded', function() {
