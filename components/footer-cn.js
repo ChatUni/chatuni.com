@@ -58,7 +58,7 @@ class FooterCN extends HTMLElement {
                 <div class="footer-content">
                     <div class="copyright">版权所有 © 2025 Gaia AI Lab. 保留所有权利。</div>
                     <div class="footer-links">
-                        <a href="#">隐私政策</a>
+                        <a href="https://docs.google.com/document/d/1b4zyFaPIWoeURpoPQa-Mg4EFmTTxI-1Y/edit?usp=sharing&ouid=100757965655395420222&rtpof=true&sd=true">隐私政策</a>
                         <span class="separator">|</span>
                         <a href="#">Cookie 使用</a>
                         <span class="separator">|</span>

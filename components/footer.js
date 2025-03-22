@@ -58,7 +58,7 @@ class Footer extends HTMLElement {
                 <div class="footer-content">
                     <div class="copyright">Copyright © 2025 Gaia AI Lab. All rights reserved.</div>
                     <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
+                        <a href="https://docs.google.com/document/d/1b4zyFaPIWoeURpoPQa-Mg4EFmTTxI-1Y/edit?usp=sharing&ouid=100757965655395420222&rtpof=true&sd=true">Privacy Policy</a>
                         <span class="separator">|</span>
                         <a href="#">Use of Cookies</a>
                         <span class="separator">|</span>

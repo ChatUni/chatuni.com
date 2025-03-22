@@ -44,7 +44,10 @@ class HeadComponent extends HTMLElement {
         commonScriptElement.setAttribute('src', 'components/common.js');
         
         // Append all elements to the document head
-        document.head.appendChild(metaCharset);
+        // Meta charset must be first for proper encoding
+        document.head.insertBefore(metaCharset, document.head.firstChild);
+        
+        // Append the rest of the elements
         document.head.appendChild(metaViewport);
         document.head.appendChild(titleElement);
         document.head.appendChild(materialIconsLink);
