@@ -140,6 +140,7 @@ class HeaderCN extends HTMLElement {
                     <li><a href="watch-cn.html" class="${currentPath === 'watch-cn.html' ? 'active' : ''}">AI手表</a></li>
                     <li><a href="earphones-cn.html" class="${currentPath === 'earphones-cn.html' ? 'active' : ''}">AI耳机</a></li>
                     <li><a href="toy-cn.html" class="${currentPath === 'toy-cn.html' ? 'active' : ''}">AI毛绒玩具</a></li>
+                    <li><a href="agent-cn.html" class="${currentPath === 'agent-cn.html' ? 'active' : ''}">AI代理商店</a></li>
                     <li><span class="lang-switch" onclick="switchLanguage()">EN</span></li>
                 </ul>
             </nav>
@@ -173,6 +174,12 @@ class HeaderCN extends HTMLElement {
                         <a href="toy-cn.html" class="${currentPath === 'toy-cn.html' ? 'active' : ''}">
                             <span class="material-icons">smart_toy</span>
                             玩具
+                        </a>
+                    </li>
+                    <li>
+                        <a href="agent-cn.html" class="${currentPath === 'agent-cn.html' ? 'active' : ''}">
+                            <span class="material-icons">support_agent</span>
+                            代理
                         </a>
                     </li>
                 </ul>

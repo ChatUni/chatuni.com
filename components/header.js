@@ -140,6 +140,7 @@ class Header extends HTMLElement {
                     <li><a href="watch.html" class="${currentPath === 'watch.html' ? 'active' : ''}">AI Watch</a></li>
                     <li><a href="earphones.html" class="${currentPath === 'earphones.html' ? 'active' : ''}">AI Earphones</a></li>
                     <li><a href="toy.html" class="${currentPath === 'toy.html' ? 'active' : ''}">AI Plush Toy</a></li>
+                    <li><a href="agent.html" class="${currentPath === 'agent.html' ? 'active' : ''}">AI Agent Store</a></li>
                     <li><span class="lang-switch" onclick="switchLanguage()">中文</span></li>
                 </ul>
             </nav>
@@ -173,6 +174,12 @@ class Header extends HTMLElement {
                         <a href="toy.html" class="${currentPath === 'toy.html' ? 'active' : ''}">
                             <span class="material-icons">smart_toy</span>
                             Toy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="agent.html" class="${currentPath === 'agent.html' ? 'active' : ''}">
+                            <span class="material-icons">support_agent</span>
+                            Agent
                         </a>
                     </li>
                 </ul>
