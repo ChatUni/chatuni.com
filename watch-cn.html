@@ -1,103 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI手表 - 未来科技</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="components/header-cn.js"></script>
-    <script src="components/footer-cn.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-        }
-
-        body {
-            background-color: #000;
-            color: #fff;
-        }
-
-        @media (max-width: 734px) {
-            .hero {
-                padding-bottom: 80px;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-                margin: 60px 0 16px;
-            }
-
-            .hero p {
-                font-size: 21px;
-            }
-
-            .feature h2 {
-                font-size: 32px;
-            }
-
-            .feature p {
-                font-size: 17px;
-            }
-        }
-
-        .hero {
-            padding-top: 44px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 56px;
-            margin: 100px 0 20px;
-        }
-
-        .hero p {
-            font-size: 28px;
-            color: #888;
-            margin-bottom: 30px;
-        }
-
-        .price {
-            font-size: 24px;
-            color: #888;
-            margin-bottom: 40px;
-        }
-
-        .product-image {
-            width: 100%;
-            max-width: 1200px;
-            height: auto;
-            margin: 30px 0;
-        }
-
-        .features {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 100px 20px;
-        }
-
-        .feature {
-            margin-bottom: 100px;
-            text-align: center;
-        }
-
-        .feature h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .feature p {
-            font-size: 21px;
-            color: #888;
-            line-height: 1.5;
-            margin-bottom: 30px;
-        }
-
-    </style>
+    <script src="components/head-component.js"></script>
+    <chat-head title="AI手表 - 未来科技"></chat-head>
 </head>
-<body>
+<body class="dark">
     <chat-header-cn></chat-header-cn>
 
     <div class="hero">
@@ -133,30 +40,6 @@
         </div>
     </div>
 
-    <script>
-    function switchLanguage() {
-        const path = window.location.pathname;
-        const filename = path.split('/').pop();
-        if (filename.includes('-cn')) {
-            window.location.href = filename.replace('-cn', '');
-        } else {
-            window.location.href = filename.replace('.html', '-cn.html');
-        }
-    }
-    </script>
     <chat-footer-cn></chat-footer-cn>
-    <script>
-        // Add active class to current page in mobile nav
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPath = window.location.pathname;
-            const header = document.querySelector('chat-header-cn');
-            const mobileNavLinks = header.shadowRoot.querySelectorAll('.mobile-nav a');
-            mobileNavLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPath.split('/').pop()) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
