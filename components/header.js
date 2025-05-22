@@ -141,6 +141,7 @@ class Header extends HTMLElement {
                     <li><a href="earphones.html" class="${currentPath === 'earphones.html' ? 'active' : ''}">AI Earphones</a></li>
                     <li><a href="toy.html" class="${currentPath === 'toy.html' ? 'active' : ''}">AI Plush Toy</a></li>
                     <li><a href="agent.html" class="${currentPath === 'agent.html' ? 'active' : ''}">AI Agent Store</a></li>
+                    <li><a href="https://en.ChatUni.com.cn">AI Tutors</a></li>
                     <li><span class="lang-switch" onclick="switchLanguage()">中文</span></li>
                 </ul>
             </nav>
